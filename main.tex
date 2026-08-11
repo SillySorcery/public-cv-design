@@ -1,0 +1,178 @@
+% !TeX program = XeLaTeX
+\documentclass[12pt,a4paper]{report}
+
+% ---------------------------
+% Packages for styling
+% ---------------------------
+\usepackage[british]{babel}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+
+% ---------------------------
+% Page setup
+% ---------------------------
+\geometry{margin=0.8in}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+
+% ---------------------------
+% Fonts (XeLaTeX)
+% ---------------------------
+\setmainfont[
+  Path = styles/,
+  UprightFont = ARIAL.ttf,
+  BoldFont    = ARIALBD.ttf,
+  ItalicFont  = ARIALI.TTF
+]{}
+
+% ---------------------------
+% Section formatting
+% ---------------------------
+\titleformat{\chapter}[hang]{\Large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\chapter}{0pt}{10pt}{5pt}
+
+% ---------------------------
+% PDF metadata
+% ---------------------------
+\hypersetup{
+  pdftitle={Resume - FirstName LastName},
+  pdfauthor={FirstName LastName},
+  colorlinks=true, linkcolor=black, urlcolor=blue
+}
+
+% ---------------------------
+% Custom commands
+% ---------------------------
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\resumeSection}[1]{\section*{\Large\bfseries #1}\vspace{-0.5em}\hrule\vspace{0.2em}}
+\renewcommand{\arraystretch}{1.3}
+
+% ---------------------------
+\begin{document}
+
+% ---------------------------
+% Header
+% ---------------------------
+\begin{center}
+	{\Huge \textbf{FirstName LastName}}\\
+	\vspace{4pt}
+	\href{mailto:email@email.com}{email@email.com} \;|\;
+	+44 1234 123456 \;|\;
+	City, United Kingdom \;|\;
+	\href{https://www.linkedin.com/in/url}{linkedin.com/in/url}
+\end{center}
+
+% ---------------------------
+\resumeSection{Profile}
+About 60 words describing who you are as an individual. Briefly highlight your
+background, key strengths, and personal qualities, and provide a sense of your
+career interests or aspirations. Focus on what makes you a strong candidate and
+the value you can bring, rather than listing detailed experience, qualifications, or
+technical skills that are covered elsewhere in the CV.
+
+% ---------------------------
+\resumeSection{Experience}
+\textbf{Job Title} \hfill Start Date -- End Date\\
+Organisation Name -- Location\\
+
+\begin{itemize}[leftmargin=*]
+    \resumeItem{Describe a key responsibility or area of ownership within the role.}
+    
+    \resumeItem{Highlight a significant achievement, improvement, or measurable outcome
+    that demonstrates your impact.}
+    
+    \resumeItem{Include an example of relevant technical, analytical, administrative,
+    or project-based work undertaken.}
+    
+    \resumeItem{Demonstrate collaboration with colleagues, stakeholders, customers,
+    or external organisations where applicable.}
+    
+    \resumeItem{Showcase communication skills through reports, presentations,
+    correspondence, content creation, or similar activities.}
+    
+    \resumeItem{Include any additional achievements, initiatives, leadership,
+    problem-solving, or specialist responsibilities relevant to the role.}
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Job Title} \hfill Start Date -- End Date\\
+Organisation Name\\
+
+\begin{itemize}[leftmargin=*]
+    \resumeItem{Describe key responsibilities and the scope of your work.}
+    
+    \resumeItem{Highlight notable achievements, projects, skills developed,
+    or measurable outcomes delivered.}
+\end{itemize}
+
+% ---------------------------
+\resumeSection{Education}
+
+\textbf{Degree Title}, University Name \hfill Start Year -- End Year\\
+Expected Graduation / Graduation Date
+
+\begin{itemize}
+    \item Include notable academic achievements, awards, scholarships, or
+          distinctions where relevant.
+    \item Highlight dissertations, research projects, or coursework that
+          demonstrates relevant knowledge or skills.
+    \item Include extracurricular activities, leadership positions, societies,
+          volunteering, or other achievements that showcase transferable skills.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{A-Levels (or Equivalent)}, Institution Name \hfill Start Year -- End Year
+
+\begin{itemize}
+    \item List subjects studied and grades achieved.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{GCSEs (or Equivalent)}, Institution Name \hfill Start Year -- End Year
+
+\begin{itemize}
+    \item Include a brief summary of results or state that details are available
+          upon request.
+\end{itemize}
+
+% ---------------------------
+
+\resumeSection{Skills}
+
+\begin{tabular}{
+>{\bfseries\raggedright\arraybackslash}p{4cm}
+>{\raggedright\arraybackslash}p{\dimexpr\linewidth-4cm-2\tabcolsep\relax}
+}
+
+Technical Skills &
+Programming languages, software, platforms, specialist tools, or
+other technical competencies relevant to the role. \\
+
+Industry Knowledge &
+Relevant subject knowledge, methodologies, regulatory awareness,
+or professional expertise applicable to your chosen field. \\
+
+Communication &
+Written communication, presentations, public speaking, stakeholder
+engagement, customer service, content creation, or interpersonal skills. \\
+
+Organisation &
+Project management, planning, prioritisation, coordination,
+leadership, teamwork, or time management skills. \\
+
+Tools &
+Professional software packages, productivity tools, creative software,
+data analysis tools, or other platforms you are confident using. \\
+
+\end{tabular}
+
+\end{document}

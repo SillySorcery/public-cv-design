@@ -1,0 +1,11 @@
+services:
+  xelatex:
+    build: .
+    container_name: latex-xetex
+    volumes:
+      - .:/work
+    working_dir: /work
+    command: >
+      bash -c "mkdir -p output &&
+               fc-cache -f -v &&
+               xelatex -interaction=nonstopmode -halt-on-error -output-directory=output -aux-directory=output main.tex"
