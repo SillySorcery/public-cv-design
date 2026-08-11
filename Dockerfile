@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     texlive-latex-recommended \
     texlive-latex-extra \
     texlive-lang-english \
+    texlive-fonts-recommended \
     fontconfig \
     && rm -rf /var/lib/apt/lists/*
 
