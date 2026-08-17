@@ -1,0 +1,5 @@
+/output/main.pdf
+/styles/
+
+# ignore main LaTeX source
+main.tex
